@@ -17,7 +17,7 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.5.2
     - name: change directory
-      run: cd vite-project
+      run: cd .\vite-project\
     - name: install nodemodules
       run: npm i
     - name: build package
@@ -25,7 +25,7 @@ jobs:
     - name: change main directory
       run: cd ..
     - name: insert in server
-      run: cd server
+      run: cd .\server\
     - name: install modules
       run: npm i
     - name: run server
@@ -36,7 +36,6 @@ jobs:
         path: "./app.js"
     - name: Deploy GitHub Pages site
       uses: actions/deploy-pages@v2.0.1
-
       
       
     

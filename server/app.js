@@ -30,6 +30,7 @@ mongoose.connection.on("connected", () => {
     app.use(bodyParser.json({ limit: "100mb" })) // bodyParser - Initializing/Configuration
     app.use(compression()) // use compression middleware to compress and serve the static content
     app.use("/fileuploads", express.static(path.join(__dirname, "/fileuploads")))
+    app.use("/", express.static(path.join(__dirname, "../vite-projet/dist")));
 
     var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
