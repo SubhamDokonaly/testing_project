@@ -21,7 +21,7 @@ jobs:
       run: npm i && npm run build
     - name: install node modules in server
       working-directory: ./server   
-      run: npm i && npm start
+      run: npm i && node app
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v1.0.8
       with:
