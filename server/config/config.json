@@ -1,0 +1,28 @@
+{
+  "port": "4008",
+  "mongodb": {
+    "host": "192.168.0.200",
+    "port": "37017",
+    "database": "allmasters",
+    "username": "",
+    "password": ""
+  },
+  "booking": {
+    "bIdFormat": "AMBLOC"
+  },
+  "settings": {
+    "apiUrl": "192.168.0.200:4008/",
+    "nodeFileUploads": "fileuploads/",
+    "siteTitle": "allmasters",
+    "siteUrl": "http://localhost:5173/",
+    "otpUrl": "http://localhost:5173/otp/",
+    "changePasswordUrl": "http://localhost:5173/change-password/",
+    "createPasswordUrl": "http://localhost:5173/create-password/",
+    "cfsPasswordUrl": "http://localhost:5173/cfspassword/",
+    "milestoneUrl": "http://localhost:5173/user/mybookings/"
+  },
+  "azureFilePath": {
+    "shareName": "files",
+    "directory": "All Masters/Local"
+  }
+}
