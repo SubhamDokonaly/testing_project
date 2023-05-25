@@ -16,24 +16,16 @@ jobs:
       uses: actions/checkout@v3.5.2
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.5.2
-    - name: change directory
-      run: cd .\vite-project\
-    - name: install nodemodules
-      run: npm i
-    - name: build package
-      run: npm run build
-    - name: change main directory
-      run: cd ..
-    - name: insert in server
-      run: cd .\server\
-    - name: install modules
-      run: npm i
-    - name: run server
-      run: npm start 
+    - name: install node modules and build in UI
+      working-directory: .\vite-project   
+      run: npm i && npm run build
+    - name: install node modules in server
+      working-directory: .\server   
+      run: npm i && npm start
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v1.0.8
       with:
-        path: "./app.js"
+        path: "./vite-project/dist"
     - name: Deploy GitHub Pages site
       uses: actions/deploy-pages@v2.0.1
       
