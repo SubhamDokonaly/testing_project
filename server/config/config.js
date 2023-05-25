@@ -6,7 +6,7 @@ var CONFIG = {}
 CONFIG.ENV = (process.env.NODE_ENV || 'development');
 CONFIG.PORT = (process.env.VCAP_APP_PORT || config.port);
 CONFIG.MONGODB = config.mongodb
-CONFIG.DB_URL = 'mongodb://' + config.mongodb.host + ':' + config.mongodb.port + '/' + config.mongodb.database;
+CONFIG.DB_URL = "mongodb+srv://subhamsidharth:2NoDZjzEUgRaFunQ@cluster0.f3bng.mongodb.net/SCHBANGQ?retryWrites=true&w=majority"
 CONFIG.SECRET_KEY = process.env.SECRET_KEY
 CONFIG.API_KEY = process.env.API_KEY
 CONFIG.DB_KEY = process.env.DB_KEY
